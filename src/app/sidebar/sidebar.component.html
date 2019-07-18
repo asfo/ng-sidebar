@@ -1,0 +1,15 @@
+<div class="sidebar" [style.width.px]="width">
+  <div class="sidebar__header">
+    <h3>{{ title }}</h3>
+    <button class="close" (click)="this.close()">
+      <fa-icon [icon]="['fas', 'times']"></fa-icon>
+    </button>
+  </div>
+  <div class="sidebar__body">
+    <ng-content></ng-content>
+  </div>
+  <div class="sidebar__grabber">
+    <fa-icon [icon]="['fas', 'grip-lines-vertical']"></fa-icon>
+  </div>
+</div>
+<div class="sidebar__overlay"></div>

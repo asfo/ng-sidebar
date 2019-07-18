@@ -1,0 +1,14 @@
+<h1>Sidebar demo</h1>
+<br />
+<button (click)="sidebarService.open('sidebar-1')">Sidebar 1</button>
+<button (click)="sidebarService.open('sidebar-2')">Sidebar 2</button>
+<br /><br />
+<a [routerLink]="['/hola']">Ir a hola</a>
+
+<app-sidebar id="sidebar-1" [title]="'Mi titulo 1'">
+  <h1>Hola, soy el sidebar 1</h1>
+</app-sidebar>
+
+<app-sidebar id="sidebar-2" [title]="'Mi titulo 2'">
+  <h1>Hola, soy el sidebar 2</h1>
+</app-sidebar>
