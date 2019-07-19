@@ -33,9 +33,11 @@ export class SidebarComponent implements OnInit, OnDestroy {
   }
 
   @HostListener('document:mousedown', ['$event'])
-  onMouseDown(event: MouseEvent) {
-    this.grabber = true;
-    this.oldX = event.clientX;
+  onMouseDown(event: any) {
+    if (event.target.className === 'sidebar__grabber') {
+      this.grabber = true;
+      this.oldX = event.clientX;
+    }
   }
 
   constructor(
